@@ -1,0 +1,7 @@
+model_id: Qwen/Qwen3-VL-2B-Instruct
+local_dir: models/Qwen3-VL-2B-Instruct
+revision: master
+ignore_file_pattern:
+  - "*.bin"
+prefer_swift: true
+max_workers: 4

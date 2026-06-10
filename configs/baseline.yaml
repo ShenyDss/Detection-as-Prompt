@@ -1,0 +1,36 @@
+baselines:
+  - name: Detector only
+    mode: detector_only
+    detection_prompt: false
+    vlm_review: false
+    kg_constraint: false
+  - name: VLM direct
+    mode: vlm_direct
+    detection_prompt: false
+    vlm_review: true
+    kg_constraint: false
+  - name: Detector text prompt
+    mode: detector_text_prompt
+    detection_prompt: true
+    region_crop: false
+    uncertainty_routing: false
+    kg_constraint: false
+  - name: Region-guided VLM
+    mode: region_guided_vlm
+    detection_prompt: true
+    region_crop: true
+    self_verification: false
+    uncertainty_routing: false
+    kg_constraint: false
+  - name: Detector plus RAG
+    mode: detector_plus_rag
+    detection_prompt: true
+    kg_constraint: false
+    retrieval_only: true
+  - name: Full model
+    mode: full
+    detection_prompt: true
+    self_verification: true
+    uncertainty_routing: true
+    confusion_candidates: true
+    kg_constraint: true

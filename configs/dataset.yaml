@@ -1,0 +1,15 @@
+name: textile_defect_placeholder
+root_dir: data
+image_dir: data/images
+annotation_dir: data/annotations
+train_split: data/annotations/train.jsonl
+val_split: data/annotations/val.jsonl
+test_split: data/annotations/test.jsonl
+class_names:
+  - loose_weft
+  - broken_weft
+  - coarse_weft
+  - yarn_irregularity
+image_size:
+  width: 1024
+  height: 1024

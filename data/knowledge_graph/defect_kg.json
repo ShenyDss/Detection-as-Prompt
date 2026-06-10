@@ -1,0 +1,160 @@
+{
+  "name": "textile_defect_knowledge_graph_demo",
+  "metadata": {
+    "version": "demo_v1",
+    "description": "Demo KG for Detection-as-Prompt development. Replace with expert-curated industrial knowledge before experiments."
+  },
+  "classes": [
+    {
+      "name": "loose_weft",
+      "visual_attributes": [
+        "localized slack or loose horizontal yarn",
+        "irregular weft density",
+        "soft boundary along the weft direction",
+        "small local texture discontinuity"
+      ],
+      "confusion_classes": [
+        "coarse_weft",
+        "yarn_irregularity",
+        "broken_weft"
+      ],
+      "causes": [
+        "unstable weft tension",
+        "improper loom setting",
+        "temporary yarn feeding fluctuation"
+      ],
+      "actions": [
+        "adjust weft tension",
+        "inspect loom setting",
+        "check yarn feeding stability"
+      ],
+      "risk_notes": [
+        "may cause local texture unevenness if repeated"
+      ]
+    },
+    {
+      "name": "broken_weft",
+      "visual_attributes": [
+        "interrupted horizontal yarn structure",
+        "visible missing weft segment",
+        "sharp local discontinuity",
+        "high contrast gap along the weft direction"
+      ],
+      "confusion_classes": [
+        "loose_weft",
+        "yarn_irregularity",
+        "coarse_weft"
+      ],
+      "causes": [
+        "yarn breakage",
+        "excessive weft tension",
+        "mechanical interruption"
+      ],
+      "actions": [
+        "stop and repair broken yarn",
+        "reduce excessive tension",
+        "inspect shuttle or feeding mechanism"
+      ],
+      "risk_notes": [
+        "high-priority defect that may lead to structural failure"
+      ]
+    },
+    {
+      "name": "coarse_weft",
+      "visual_attributes": [
+        "thicker horizontal yarn appearance",
+        "increased local yarn density",
+        "coarse texture stripe",
+        "elongated band-like visual pattern"
+      ],
+      "confusion_classes": [
+        "loose_weft",
+        "yarn_irregularity",
+        "broken_weft"
+      ],
+      "causes": [
+        "incorrect yarn count",
+        "uneven yarn thickness",
+        "batch material variation"
+      ],
+      "actions": [
+        "verify yarn count",
+        "replace inconsistent yarn batch",
+        "inspect material supply"
+      ],
+      "risk_notes": [
+        "may reduce visual uniformity and product grade"
+      ]
+    },
+    {
+      "name": "yarn_irregularity",
+      "visual_attributes": [
+        "irregular local yarn thickness",
+        "non-uniform texture point",
+        "small abnormal speckle or streak",
+        "weakly localized pattern disturbance"
+      ],
+      "confusion_classes": [
+        "loose_weft",
+        "coarse_weft",
+        "broken_weft"
+      ],
+      "causes": [
+        "yarn quality variation",
+        "foreign fiber contamination",
+        "minor spinning inconsistency"
+      ],
+      "actions": [
+        "inspect yarn quality",
+        "check material cleanliness",
+        "trace supplier batch"
+      ],
+      "risk_notes": [
+        "often ambiguous and requires visual confirmation"
+      ]
+    }
+  ],
+  "cause_action_edges": {
+    "unstable weft tension": [
+      "adjust weft tension",
+      "check yarn feeding stability"
+    ],
+    "improper loom setting": [
+      "inspect loom setting"
+    ],
+    "temporary yarn feeding fluctuation": [
+      "check yarn feeding stability"
+    ],
+    "yarn breakage": [
+      "stop and repair broken yarn"
+    ],
+    "excessive weft tension": [
+      "reduce excessive tension",
+      "adjust weft tension"
+    ],
+    "mechanical interruption": [
+      "inspect shuttle or feeding mechanism"
+    ],
+    "incorrect yarn count": [
+      "verify yarn count"
+    ],
+    "uneven yarn thickness": [
+      "verify yarn count",
+      "inspect material supply"
+    ],
+    "batch material variation": [
+      "replace inconsistent yarn batch",
+      "trace supplier batch"
+    ],
+    "yarn quality variation": [
+      "inspect yarn quality",
+      "trace supplier batch"
+    ],
+    "foreign fiber contamination": [
+      "check material cleanliness"
+    ],
+    "minor spinning inconsistency": [
+      "inspect yarn quality"
+    ]
+  }
+}

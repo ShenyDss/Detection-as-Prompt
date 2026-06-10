@@ -1,0 +1,21 @@
+variants:
+  - name: Full model
+    overrides: {}
+  - name: w/o detection prompt
+    overrides:
+      detection_prompt: false
+  - name: w/o self-verification
+    overrides:
+      self_verification: false
+  - name: w/o uncertainty routing
+    overrides:
+      uncertainty_routing: false
+  - name: w/o confusion candidates
+    overrides:
+      confusion_candidates: false
+  - name: w/o KG constraint
+    overrides:
+      kg_constraint: false
+  - name: w/o instruction tuning
+    overrides:
+      instruction_tuning: false

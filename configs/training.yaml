@@ -1,0 +1,34 @@
+name: dap_lora_training
+instruction_data: data/instruction_data/yolo26n_val_instruction.jsonl
+base_model: Qwen/Qwen3-VL-2B-Instruct
+model_dir: models/Qwen3-VL-2B-Instruct
+output_dir: outputs/checkpoints/dap_lora
+dry_run: true
+lora:
+  rank: 16
+  alpha: 32
+  dropout: 0.05
+  target_modules:
+    - q_proj
+    - k_proj
+    - v_proj
+    - o_proj
+    - gate_proj
+    - up_proj
+    - down_proj
+optimization:
+  learning_rate: 0.0002
+  epochs: 1
+  per_device_train_batch_size: 1
+  gradient_accumulation_steps: 8
+  max_length: 2048
+  logging_steps: 5
+  save_steps: 100
+  save_total_limit: 2
+runtime:
+  device: auto
+  precision: bf16
+  quantization: null
+  gradient_checkpointing: true
+  dataloader_num_workers: 0
+  max_train_samples: null

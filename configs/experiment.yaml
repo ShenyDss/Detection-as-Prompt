@@ -1,0 +1,15 @@
+name: dap_step1_scaffold
+seed: 42
+output_dir: outputs
+routes:
+  high_confidence_threshold: 0.8
+  low_confidence_threshold: 0.35
+  ambiguity_margin_threshold: 0.15
+  low_box_quality_threshold: 0.5
+enabled_modules:
+  detection_prompt: true
+  self_verification: true
+  uncertainty_routing: true
+  confusion_candidates: true
+  kg_constraint: true
+  instruction_tuning: false

@@ -1,0 +1,10 @@
+name: defect_knowledge_graph
+path: data/knowledge_graph/defect_kg.json
+retrieval:
+  max_visual_attributes: 6
+  max_confusion_classes: 3
+  max_causes: 5
+  max_actions: 5
+consistency:
+  require_valid_class: true
+  require_valid_cause_action_path: true

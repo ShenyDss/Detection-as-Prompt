@@ -1,0 +1,3 @@
+{"image_id":"image_000001","hypothesis_id":"image_000001_000","hypothesis_status":"verify","corrected_class":"loose_weft","bbox":[96.0,128.0,260.0,288.0],"causes":["unstable weft tension"],"actions":["adjust weft tension"]}
+{"image_id":"image_000001","hypothesis_id":"image_000001_001","hypothesis_status":"reject","corrected_class":null,"bbox":null,"causes":[],"actions":[]}
+{"image_id":"image_000002","hypothesis_id":"image_000002_000","hypothesis_status":"revise","corrected_class":"broken_weft","bbox":[420.0,360.0,590.0,520.0],"causes":["yarn breakage"],"actions":["stop and repair broken yarn"]}

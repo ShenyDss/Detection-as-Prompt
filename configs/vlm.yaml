@@ -1,0 +1,10 @@
+name: mock_vlm_reviewer
+mode: mock
+checkpoint: null
+model_dir: models/Qwen3-VL-2B-Instruct
+device: auto
+max_new_tokens: 512
+temperature: 0.0
+use_lora: true
+lora_checkpoint: outputs/checkpoints/dap_lora/final
+output_schema: vlm_decision_v1

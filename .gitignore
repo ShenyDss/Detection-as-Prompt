@@ -1,0 +1,63 @@
+# Python caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local Python environments
+.venv/
+venv/
+env/
+.conda/
+.condarc
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Datasets and generated data
+data/images/
+data/imported/
+data/instruction_data/
+data/yolo/
+data/detector_predictions/*.jsonl
+data/annotations/test_decisions.jsonl
+NZB_dataset/
+SM_norm/
+
+# Training, inference, and evaluation outputs
+outputs/
+!outputs/.gitkeep
+
+# Model checkpoints and weights
+models/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx
+*.engine
+*.weights
+
+# Logs and experiment records
+*.log
+logs/
+runs/
+wandb/
+mlruns/
+tensorboard/
+events.out.tfevents*
+
+# Archives and temporary artifacts
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+tmp/
+temp/

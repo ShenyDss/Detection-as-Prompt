@@ -1,0 +1,8 @@
+name: mock_yolo
+mode: mock
+checkpoint: null
+confidence_threshold: 0.25
+iou_threshold: 0.5
+top_k_confusions: 3
+raw_output_path: data/detector_predictions/raw_detector_predictions.jsonl
+output_path: data/detector_predictions/hypotheses.jsonl

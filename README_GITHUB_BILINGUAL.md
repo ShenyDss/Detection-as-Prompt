@@ -1,3 +1,0 @@
-# Detection-as-Prompt
-
-
